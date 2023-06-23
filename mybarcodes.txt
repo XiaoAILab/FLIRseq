@@ -1,0 +1,4 @@
+miRNA_barcode1	CAACTTTCTT
+miRNA_barcode2	GTTCCCTGAA
+miRNA_barcode3	TAGATGAAAC
+miRNA_barcode4	AGAATCCGAA

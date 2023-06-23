@@ -1,0 +1,57 @@
+Analysis date: Thu Jun 22 23:39:33 CST 2023
+Input file(s): miRNA_barcode2.fasta
+Output file(s): miRNA_barcode2.vdjca
+Version: 3.0.13; built=Wed Apr 15 23:28:14 CST 2020; rev=f614226; lib=repseqio.v1.6
+Command line arguments: --species hsa --library default --threads 56 --report miRNA_barcode2.report -p rna-seq -OvParameters.geneFeatureToAlign=VTranscriptWithP -OvParameters.parameters.floatingLeftBound=true -OjParameters.parameters.floatingRightBound=false -OcParameters.parameters.floatingRightBound=false miRNA_barcode2.fasta miRNA_barcode2.vdjca
+Analysis time: 843.00ms
+Total sequencing reads: 2
+Successfully aligned reads: 2 (100%)
+Overlapped: 0 (0%)
+Overlapped and aligned: 0 (0%)
+Alignment-aided overlaps: 0 (NaN%)
+Overlapped and not aligned: 0 (0%)
+TRB chains: 1 (50%)
+IGH chains: 1 (50%)
+Realigned with forced non-floating bound: 0 (0%)
+Realigned with forced non-floating right bound in left read: 0 (0%)
+Realigned with forced non-floating left bound in right read: 0 (0%)
+======================================
+Analysis date: Thu Jun 22 23:39:34 CST 2023
+Input file(s): miRNA_barcode2.vdjca
+Output file(s): miRNA_barcode2.clna
+Version: 3.0.13; built=Wed Apr 15 23:28:14 CST 2020; rev=f614226; lib=repseqio.v1.6
+Command line arguments: --report miRNA_barcode2.report --threads 56 --write-alignments -OassemblingFeatures="[CDR3]" -OseparateByV=false -OseparateByJ=true -OseparateByC=true miRNA_barcode2.vdjca miRNA_barcode2.clna
+Analysis time: 121.00ms
+Final clonotype count: 2
+Average number of reads per clonotype: 1
+Reads used in clonotypes, percent of total: 2 (100%)
+Reads used in clonotypes before clustering, percent of total: 2 (100%)
+Number of reads used as a core, percent of used: 2 (100%)
+Mapped low quality reads, percent of used: 0 (0%)
+Reads clustered in PCR error correction, percent of used: 0 (0%)
+Reads pre-clustered due to the similar VJC-lists, percent of used: 0 (0%)
+Reads dropped due to the lack of a clone sequence, percent of total: 0 (0%)
+Reads dropped due to low quality, percent of total: 0 (0%)
+Reads dropped due to failed mapping, percent of total: 0 (0%)
+Reads dropped with low quality clones, percent of total: 0 (0%)
+Clonotypes eliminated by PCR error correction: 0
+Clonotypes dropped as low quality: 0
+Clonotypes pre-clustered due to the similar VJC-lists: 0
+TRB chains: 1 (50%)
+IGH chains: 1 (50%)
+======================================
+Analysis date: Thu Jun 22 23:39:34 CST 2023
+Input file(s): miRNA_barcode2.clna
+Output file(s): miRNA_barcode2.contigs.clns
+Version: 3.0.13; built=Wed Apr 15 23:28:14 CST 2020; rev=f614226; lib=repseqio.v1.6
+Command line arguments: --report miRNA_barcode2.report --threads 56 miRNA_barcode2.clna miRNA_barcode2.contigs.clns
+Analysis time: 137.00ms
+Initial clonotype count: 2
+Final clonotype count: 2 (100%)
+Canceled assemblies: 0 (0%)
+Number of premature termination assembly events, percent of number of initial clonotypes: 0.0 (0%)
+Longest contig length: 51
+Clustered variants: 0 (0%)
+Reads in clustered variants: 0.0 (0%)
+Reads in divided (newly created) clones: 0.0 (0%)
+======================================
