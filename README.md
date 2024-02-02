@@ -17,22 +17,12 @@ grep -n ">" Consensus.fasta |grep -v "_1_" > sample_n.txt
 
 python2 extract_seq_by_id.py Consensus.fasta sample_n.txt repeat2_Consensus.fasta
 
-##################  3.reorient consensus reads and demux the reads by index  ###############
+##################  3.reorient consensus reads ###############
 
 python fasta_miRNA.py --file repeat2_Consensus.fasta
-
-conda install fastx_toolkit
-
-cat Consensus_Rdir.fasta | fastx_barcode_splitter.pl --bcfile mybarcodes.txt --eol --mismatches number --prefix ./ --suffix ".fasta"
 
 ##################  4. Align to the T- or B- cell receptor repertoire  ###############
 
 conda install -c milaboratories mixcr
 
-mixcr analyze amplicon -s hsa --starting-material rna --3-end c-primers --5-end v-primers --adapters no-adapters --contig-assembly --impute-germline-on-export miRNA_barcode1.fasta miRNA_barcode1
-
-mixcr analyze amplicon -s hsa --starting-material rna --3-end c-primers --5-end v-primers --adapters no-adapters --contig-assembly --impute-germline-on-export miRNA_barcode2.fasta miRNA_barcode2
-
-mixcr analyze amplicon -s hsa --starting-material rna --3-end c-primers --5-end v-primers --adapters no-adapters --contig-assembly --impute-germline-on-export miRNA_barcode3.fasta miRNA_barcode3
-
-mixcr analyze amplicon -s hsa --starting-material rna --3-end c-primers --5-end v-primers --adapters no-adapters --contig-assembly --impute-germline-on-export miRNA_barcode4.fasta miRNA_barcode4
+mixcr analyze amplicon -s hsa --starting-material rna --3-end c-primers --5-end v-primers --adapters no-adapters --contig-assembly --impute-germline-on-export Consensus_Rdir.fasta IR
