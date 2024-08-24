@@ -1,4 +1,4 @@
-# TF-BTseq
+# FLIRseq
 ##################  1. call consensus reads  ###############
 
 git clone https://github.com/rvolden/C3POa.git
